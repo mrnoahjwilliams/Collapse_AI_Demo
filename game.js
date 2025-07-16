@@ -46,6 +46,9 @@ class GameBoard {
     this.board = this.generateEmptyBoard(width, height);
     this.players = playerTypes.map((type, index) => new Player(index, type));
     this.whoseTurnIsIt = 0;
+
+    this.makeMove(new Move(1, height - 2, whoseTurnIsIt));
+    this.makeMove(new Move(width - 2, 1, whoseTurnIsIt));
   }
 
   generateEmptyBoard(w, h) {
