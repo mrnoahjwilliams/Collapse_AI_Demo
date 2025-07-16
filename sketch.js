@@ -4,14 +4,23 @@ let gridSize = 5;
 
 function setup() {
   createCanvas(600, 600);
-  game = new Game(gridSize, aiDepth);
+  createUIControls(startGame);
+  startGame(5, 5);
 }
 
 function draw() {
   background(255);
-  game.draw();
+  if (game) {
+    game.draw();
+    game.update();
+  }
 }
 
 function mousePressed() {
   game.handleClick(mouseX, mouseY);
+}
+
+function startGame(gridSize, aiDepth) {
+  game = new Game(gridSize, aiDepth);
+  loop();
 }
