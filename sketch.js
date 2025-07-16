@@ -12,7 +12,6 @@ function draw() {
   background(255);
   if (game) {
     game.draw();
-    game.update();
   }
 }
 
