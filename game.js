@@ -46,9 +46,6 @@ class GameBoard {
     this.board = this.generateEmptyBoard(width, height);
     this.players = playerTypes.map((type, index) => new Player(index, type));
     this.whoseTurnIsIt = 0;
-
-    this.makeMove(new Move(1, height - 2, whoseTurnIsIt));
-    this.makeMove(new Move(width - 2, 1, whoseTurnIsIt));
   }
 
   generateEmptyBoard(w, h) {
@@ -155,6 +152,11 @@ class GameBoard {
         this.whoseTurnIsIt = (this.whoseTurnIsIt + 1) % this.players.length;
       } while (this.players[this.whoseTurnIsIt].score === 0);
     }
+  }
+
+  setupStartingPositions() {
+    this.makeMove(new Move(1, this.height - 2, this.whoseTurnIsIt));
+    this.makeMove(new Move(this.width - 2, 1, this.whoseTurnIsIt));
   }
 }
 
