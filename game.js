@@ -163,6 +163,7 @@ class GameBoard {
 class Game {
   constructor(gridSize, aiDepth) {
     this.board = new GameBoard(gridSize, gridSize, ['human', 'ai']);
+    board.setupStartingPositions();
     this.aiDepth = aiDepth;
     this.cellSize = min(width, height) / gridSize;
     this.isHumanTurn = true;
