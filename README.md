@@ -25,6 +25,10 @@ The AI:
 - Restart and end game screens
 - Fully playable on desktop and mobile
 
+## 🚀 Try It
+
+👉 [Play now on GitHub Pages](https://mrnoahjwilliams.github.io/Collapse_AI_Demo/)
+
 ## 📜 License
 
 MIT License – use freely, modify, and share!
